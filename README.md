@@ -8,8 +8,7 @@
     * XP amount
     * Audit ratio
     * Graph that shows XP gained from each project
-    * Graph ....
-* Web page is hosted at ...
+    * Graph that shows audit ratio over time
 
 ## Authors:
 * Kätlin Krabbi (Katlink)
