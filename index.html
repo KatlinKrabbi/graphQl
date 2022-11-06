@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="main.js" type="module" defer></script>
+    <title>GraphQl</title>
+
+</head>
+
+<body>
+    <div style="float: left; display:flex; align-items:center; justify-content:center;">
+        <div class="search wrap">
+            <input type="text" class="searchTerm" id="search" placeholder="Search by username">
+            <button type="submit" class="searchButton">🔍</button>
+        </div>
+        <div class="profile">
+            <div id="avatar"></div>
+            <div class="info">
+                <div>
+                    <label for="username">Username: </label>
+                    <span class="user" id="username"></span>
+                </div>
+                <div>
+                    <label for="xp">XP: </label>
+                    <span class="user" id="xp"></span>
+                    <span> kB</span>
+                </div>
+                <div>
+                    <label for="auditRatio">Audit ratio: </label>
+                    <span class="user" id="auditRatio"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="float:right;">
+        <div class="xpGraph" id="xpGraph" style="width: 800px; height: 1100px;"></div>
+        <div class="auditGraph" id="auditGraph" style="width: 800px; height: 600px; ">
+        </div>
+
+    </div>
+</body>
+
+</html>
