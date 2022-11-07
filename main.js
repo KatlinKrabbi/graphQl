@@ -75,6 +75,12 @@ async function getValues() {
 				var project = xps[i].path.split("/")[3].replaceAll("-", " ")
 				var r = [project, xps[i].amount]
 				xpData.push(r);
+			} else if (xps[i].path == '/johvi/div-01' && xps[i].type == "xp") {
+				projects.push(xps[i].path);
+				totalXp += xps[i].amount;
+				var project = "Rust piscine"
+				var r = [project, xps[i].amount]
+				xpData.push(r);
 			}
 
 		};
@@ -141,12 +147,14 @@ async function profileData() {
 
 	google.setOnLoadCallback(drawChartAudit);
 
-	/* drawChartXp(xpData);
-	drawChartAudit(auditData); */
-
 	document.querySelector("#avatar").style.backgroundImage = `url(https://01.kood.tech/git/user/avatar/${username}/0)`
 	document.querySelector("#username").innerHTML = username;
-	document.querySelector("#xp").innerHTML = Math.round(totalXp / 1000);
+	var xp = Math.round(totalXp / 1000)
+	if (xp > 1000) {
+		document.querySelector("#xp").innerHTML = (xp / 1000).toFixed(2) + " MB";
+	} else {
+		document.querySelector("#xp").innerHTML = Math.round(totalXp / 1000) + " kB";
+	}
 	let auditRatio = auditUp / (auditDown / 100) / 100;
 	document.querySelector("#auditRatio").innerHTML = auditRatio.toFixed(1);
 }
