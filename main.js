@@ -67,7 +67,7 @@ async function getValues() {
 
 		for (let i = 0; i < xps.length; i++) {
 			if (xps[i].type == "xp" && xps[i].path.search("/piscine-go/") == -1 &&
-				xps[i].path.search("/rust/") == -1 && xps[i].path.search("/piscine-js/") == -1 && doneProjectPaths.includes(xps[i].path) &&
+				xps[i].path.search("/rust/") == -1 && xps[i].path.search("/piscine-js/") == -1 && xps[i].path.search("/piscine-js-2/") == -1 && doneProjectPaths.includes(xps[i].path) &&
 				!projects.includes(xps[i].path)) {
 
 				projects.push(xps[i].path);
